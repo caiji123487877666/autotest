@@ -7,10 +7,10 @@
 import pytest
 from other_utils.fileHandler import read_yaml
 from other_utils.apiutils import RequestBase
-
+import allure
 
 rb  = RequestBase()
-
+@allure.feature('登录模块')
 class TestLogin:
 
     @pytest.mark.parametrize('base_info',read_yaml("./qiyuanlab/login/login.yaml"))
