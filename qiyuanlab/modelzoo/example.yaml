@@ -1,0 +1,14 @@
+- base_info:
+    api_name: 查询模型库列表
+    method: post
+    url: /app/modlib/page
+    headers:
+      authorization: Bearer bf91b9d8119041acb4ddb766bbb36c0e
+      content-type: application/json
+  testCase:
+    - case_name: 模型库列表
+      json:
+        pageSize: 9999
+        pageNo: 1
+
+

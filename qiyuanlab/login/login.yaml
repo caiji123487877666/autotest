@@ -1,0 +1,11 @@
+- base_info:
+    api_name: 登录
+    method: post
+    url: /system/auth/login
+    headers:
+      content-type: application/json
+  testCase:
+    - case_name: 登录成功测试
+      json:
+        username: admin
+        password: WGxIVHNoaDUqSzE2Y2xrSg==
