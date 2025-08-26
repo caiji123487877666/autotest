@@ -1,0 +1,9 @@
+- base_info:
+    api_name: xx列表
+    method: get
+    url: /app/algorithms/page?name=&status=&showMore=false&resourceId=&chipId=&image=&pageNo=1&pageSize=12
+    headers:
+      authorization: Bearer 472cc74737774f1db9db250cd20a8d78
+  testCase:
+  - case_name: 信息列表
+    json: {}
