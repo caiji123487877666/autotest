@@ -1,0 +1,8 @@
+- base_info:
+    api_name: 训练任务列表
+    method: get
+    url: /app/assignments/page?pageNo=1&pageSize=10&assignmentId=&showName=&status=&resourceId=&image=&chipId=
+    headers:
+      authorization: Bearer b4a9ebccab384bd2952ac29c6bb7d093
+  testCase:
+  - case_name: 训练任务列表

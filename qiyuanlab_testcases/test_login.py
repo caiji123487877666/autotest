@@ -13,8 +13,12 @@ rb  = RequestBase()
 @allure.feature('登录模块')
 class TestLogin:
 
+
+    @allure.link(url='http://www.baidu.com',name='baidu')
     @pytest.mark.parametrize('base_info',read_yaml("./qiyuanlab/login/login.yaml"))
     def test_model_list(self,base_info):
-        res = rb.execute_test_case(base_info)
+        allure.dynamic.title(base_info['base_info']['api_name'])
+        allure.attach('登录','登录用户一',attachment_type=allure.attachment_type.TEXT)
+        rb.execute_test_case(base_info)
 
 

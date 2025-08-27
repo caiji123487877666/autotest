@@ -11,7 +11,7 @@ from other_utils.fileHandler import *
 from other_utils.config_parse import *
 from other_utils.sendRequests import *
 from other_utils.assertions import *
-
+import allure
 
 
 
@@ -37,9 +37,15 @@ class RequestBase:
         try:
             conf_host = self.conf.get_host('host')
             url  = conf_host + api_info['base_info']['url']
+            allure.dynamic.title(api_info['base_info']['api_name'])
             api_name = api_info['base_info']['api_name']
             method = api_info['base_info']['method']
             headers = api_info['base_info'].get('headers', None)
+            allure.attach(url,'接口地址:',attachment_type=allure.attachment_type.TEXT)
+            allure.attach(api_name,'接口名称:',attachment_type=allure.attachment_type.TEXT)
+            allure.attach(method,'请求方式:',attachment_type=allure.attachment_type.TEXT)
+            allure.attach(str(headers),'headers',attachment_type=allure.attachment_type.JSON)
+
             for testcase in api_info['testCase']:
                 case_name = testcase.pop('case_name')
                 # case_data = testcase.pop('data')

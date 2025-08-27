@@ -1,0 +1,17 @@
+- base_info:
+    api_name: 数据集列表
+    method: post
+    url: /app/datasets/page
+    headers:
+      authorization: Bearer b4a9ebccab384bd2952ac29c6bb7d093
+      content-type: application/json
+  testCase:
+  - case_name: 数据集列表
+    json:
+      pageNo: 1
+      pageSize: 24
+      datasetName: ''
+      status: ' '
+      sort: ' '
+      datasetOwner: ' '
+      tagIds: []

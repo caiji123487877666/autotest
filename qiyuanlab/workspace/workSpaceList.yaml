@@ -1,0 +1,8 @@
+- base_info:
+    api_name: 工作空间列表
+    method: get
+    url: /app/algorithms/page?name=&status=&showMore=false&resourceId=&chipId=&image=&pageNo=1&pageSize=12
+    headers:
+      authorization: Bearer b4a9ebccab384bd2952ac29c6bb7d093
+  testCase:
+  - case_name: 工作空间列表

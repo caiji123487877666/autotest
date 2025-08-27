@@ -15,12 +15,12 @@ rb = RequestBase()
 @allure.feature('测试')
 class TestModelList:
 
-    @allure.story('登录成功')
     @allure.title('用例标题')
     @allure.description('用例描述信息')
-    @pytest.mark.parametrize('base_info', read_yaml("./qiyuanlab/modelzoo/example.yaml"))
+    @pytest.mark.parametrize('base_info', read_yaml("./qiyuanlab/trainTask/trainTaskList.yaml"))
     def test_model_list(self, base_info):
         rb.execute_test_case(base_info)
+
 
 
 
