@@ -1,22 +1,22 @@
 <environment>
-    <paramter>
+    <parameter>
         <key>system</key>
         <value>macos</value>
-    </paramter>
-    <paramter>
+    </parameter>
+    <parameter>
         <key>python version</key>
         <value>3.12.6</value>
-    </paramter>
-    <paramter>
+    </parameter>
+    <parameter>
         <key>allure version</key>
         <value>2.34.1</value>
-    </paramter>
-    <paramter>
+    </parameter>
+    <parameter>
         <key>pytest version</key>
         <value>8.4.1</value>
-    </paramter>
-    <paramter>
+    </parameter>
+    <parameter>
         <key>作者</key>
         <value>sheep</value>
-    </paramter>
+    </parameter>
 </environment>

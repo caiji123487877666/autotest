@@ -4,8 +4,11 @@
 # @Author  : _Gy
 # @File    : fileHandler.py
 # @Software: PyCharm
+import datetime
+
 import yaml, os
 from config.setting import *
+
 
 def read_yaml(file_path):
     """
@@ -40,7 +43,7 @@ def write_yaml(data):
     try:
         file = open(file_path, 'a', encoding='utf-8')
         if isinstance(data, dict):
-            write_data = yaml.dump(data,allow_unicode=True,sort_keys=False)
+            write_data = yaml.dump(data, allow_unicode=True, sort_keys=False)
             file.write(write_data)
         else:
             print('写入数据格式错误')
@@ -59,8 +62,26 @@ def get_yaml_files_recursive(folder_path):
     return yaml_files
 
 
+def clean_yaml():
+    with open(FILE_PATH['extract'], 'w', encoding='utf-8') as file:
+        file.truncate()
+
+
+def get_target_data(first_node, sec_node=None):
+    try:
+        with open(FILE_PATH['extract'], 'r', encoding='utf-8') as file:
+            extract_data = yaml.safe_load(file)
+            if sec_node is None:
+                return extract_data[first_node]
+            else:
+                return extract_data.get(first_node, {}).get(sec_node)
+    except yaml.YAMLError as e:
+        print(f'读取失败，请检查格式-{e}')
+    except Exception as e:
+        print(f'读取文件未知异常-{e}')
+
+
 
 # 使用示例
 if __name__ == "__main__":
-    res = read_yaml('../qiyuanlab/modelzoo/example.yaml')
-    print(res)
+    pass

@@ -19,6 +19,8 @@ class TestLogin:
     def test_model_list(self,base_info):
         allure.dynamic.title(base_info['base_info']['api_name'])
         allure.attach('登录','登录用户一',attachment_type=allure.attachment_type.TEXT)
-        rb.execute_test_case(base_info)
+        res = rb.execute_test_case(base_info)
+        print(res.json())
+
 
 
